@@ -11,7 +11,7 @@ import Button from "../Button";
 import FreeDelivery from "../FreeDelivery";
 
 import calculateTotalPrice from "../../utils/calculate-total-price";
-import api from '../../confs/acima-10-reais.json';
+import api from '../../confs/abaixo-10-reais.json';
 
 import * as S from './style';
 
@@ -48,7 +48,7 @@ function App() {
         <Container>
           <TotalPrice total={calculateTotalPrice(api.totalizers)} />
 
-          <FreeDelivery value={calculateTotalPrice(api.totalizers)}>
+          <FreeDelivery value={calculateTotalPrice(api.totalizers)} minimumValue={10}>
             Parabéns, sua compra tem frete grátis !
           </FreeDelivery>
         </Container>

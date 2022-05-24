@@ -2,9 +2,9 @@ import React from "react";
 
 import * as S from './style';
 
-function Button({ children }) {
+function Button({ children, ...props }) {
   return (
-    <S.Button>
+    <S.Button {...props}>
       {children}
     </S.Button>
   );
