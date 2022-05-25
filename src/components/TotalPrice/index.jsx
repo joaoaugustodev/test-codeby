@@ -9,7 +9,7 @@ function TotalPrice({ total, currency = 'BRL' }) {
   const price = usePriceFormatter(total, currency);
 
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid="total">
       <S.TotalTitle>
         <span>Total</span>
         <span>{price}</span>

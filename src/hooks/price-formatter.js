@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 
 function usePriceFormatter(price = 0, currency = 'BRL') {
-  return Number(price).toLocaleString(window.navigator.language, { style: 'currency', currency: currency });
+  let numberPrice = Number(price);
+
+  if (!numberPrice) {
+    numberPrice = 0;
+  }
+
+  return numberPrice.toLocaleString(window.navigator.language, { style: 'currency', currency: currency });
 }
 
 usePriceFormatter.propTypes = {

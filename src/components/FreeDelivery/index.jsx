@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import * as S from './style';
 
 function FreeDelivery({ value = 0, minimumValue, children }) {
-    return value > minimumValue ? <S.Wrapper>{children}</S.Wrapper> : null;
+    return value > minimumValue ? <S.Wrapper data-testid="free">{children}</S.Wrapper> : null;
 }
 
 FreeDelivery.propTypes = {
